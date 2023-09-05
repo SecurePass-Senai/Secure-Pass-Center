@@ -1,7 +1,11 @@
 import "./style.css"
 
 export default function IdFacial(){
+<<<<<<< HEAD
     return(<>
+=======
+    return(
+>>>>>>> 89bdf29a4ac029c5b050f26075094434e9c392c6
         <main>
   <section className="banner">
     <div className="banner_conteudo"></div>
@@ -24,7 +28,11 @@ export default function IdFacial(){
 </main>
 
 
+<<<<<<< HEAD
 </>)
+=======
+)
+>>>>>>> 89bdf29a4ac029c5b050f26075094434e9c392c6
 
 
 }
