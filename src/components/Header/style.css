@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  :root{
+    --font1_montserrat: 'Montserrat', sans-serif;
+      --font2_righteous: 'Righteous', cursive;
+      --font3_titillium: 'Titillium Web', sans-serif;
+      --font4_lato: 'Lato', sans-serif;
+      --branco: #ffffff;
+      --preto: #00000067;
+      --verde: #12D76E;
+      --azulbotao: #1A7CA6;
+      --azulborda: #294ABD;
+      --shadow: -1px -1px 0px #000,
+      -1px 1px 0px #000,
+      1px -1px 0px #000,
+      1px 0px 0px #000;
+  }
+  
+  /* body {
+      background: url(../../assets/img/Backgronud.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      
+  } */
+  
+  .container_grid {
+    width: 90%;
+    margin: 0 auto;
+    
+  }
+  
+  .header_texto{
+    /* padding-top: 10px; */
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .container_grid p {
+    font-family: var(--font1_montserrat);
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+    color:var(--branco);
+    text-shadow:var(--shadow);    
+    margin-top: 20px;
+    
+    
+  }
+  
+  
+  .linha_header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+  }
+  
+  
+  
+  .linha_baixo_esquerda{
+    border-bottom: 1px solid var(--branco);
+    width: 1266px;
+    
+    
+  }
+  
+  .linha_header img {
+    height: 80px;
+    
+  }
+  
+  .linha_baixo_direita{
+    border-bottom: 1px solid var(--branco);
+    width: 570px;
+    
+    
+  }
