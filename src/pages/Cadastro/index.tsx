@@ -3,7 +3,13 @@ import "./style.css"
 import api from "../../utils/api";
 
 export default function Cadastro() {
-
+/*
+ * Como um pré-requisito de qualquer cadastro, deverá ser chamado um email e senha para poder salvar (pelo menos no JSON server!)
+ * para ver se está funcionando corretamente foi acrescentado 2 (dois) campos no formulário de cadastro que podem ou não sofrer 
+ * algum tipo de alteração futura!.
+ * 
+ * att. Murilo Ferreira
+*/
 
     const [matricula, setMatricula] = useState<string>("")
     const [nome, setNome] = useState<string>("")
@@ -13,6 +19,8 @@ export default function Cadastro() {
     const [sessao, setSessao] = useState<string>("")
     const [email, setEmail] = useState<string>("")
     const [password, setPassword] = useState<string>("")
+
+
 
 
 
@@ -29,10 +37,12 @@ export default function Cadastro() {
         event.target.value = valorDigitado;
     }
 
+    
+
     function cadastrarUsers(event: any) {
 
         event.preventDefault();
-
+        
         const formData = new FormData()
 
         formData.append("matricula", matricula)
@@ -44,7 +54,7 @@ export default function Cadastro() {
         formData.append("email", email)
         formData.append("password", password)
 
-
+        
 
         api.post("users", formData).then((response) => {
             console.log(response)
@@ -58,8 +68,6 @@ export default function Cadastro() {
 
 
     }
-
-
 
     return (
 
