@@ -18,16 +18,16 @@ export default function Cadastro() {
 
 
     
-    // function mascaraDataNasc(event: any) {
-    //     let valorDigitado = event.target.value; 
+    function mascaraDataNasc(event: any) {
+        let valorDigitado = event.target.value; 
 
-    //     if (!valorDigitado) return ""; 
+        if (!valorDigitado) return ""; 
 
-    //     valorDigitado = valorDigitado.replace(/\D/g, ''); 
-    //     valorDigitado = valorDigitado.replace(/(\d{2})(\d{2})(\d{2})/, '$1/$2/$3'); 
-    //     console.log(valorDigitado)
-    //     event.target.value = valorDigitado;
-    // }
+        valorDigitado = valorDigitado.replace(/\D/g, ''); 
+        valorDigitado = valorDigitado.replace(/(\d{2})(\d{2})(\d{2})/, '$1/$2/$3'); 
+        console.log(valorDigitado)
+        event.target.value = valorDigitado;
+    }
 
     function cadastrarUsers(event: any) {
 
@@ -124,7 +124,7 @@ export default function Cadastro() {
                             setDataNasc(event.target.value)
                         }}
                         required
-                        // onKeyUp={mascaraDataNasc}
+                        onKeyUp={mascaraDataNasc}
                     />
                 </div>
                 <div className="forms">
