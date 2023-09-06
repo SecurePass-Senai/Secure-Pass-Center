@@ -11,6 +11,8 @@ export default function Cadastro() {
     const [dataNasc, setDataNasc] = useState<string>("")
     const [funcao, setFuncao] = useState<string>("")
     const [sessao, setSessao] = useState<string>("")
+    const [email, setEmail] = useState<string>("")
+    const [password, setPassword] = useState<string>("")
 
 
 
@@ -39,6 +41,9 @@ export default function Cadastro() {
         formData.append("dataNasc", dataNasc)
         formData.append("funcao", funcao)
         formData.append("sessao", sessao)
+        formData.append("email", email)
+        formData.append("password", password)
+
 
 
         api.post("users", formData).then((response) => {
@@ -120,6 +125,26 @@ export default function Cadastro() {
                         }}
                         required
                         // onKeyUp={mascaraDataNasc}
+                    />
+                </div>
+                <div className="forms">
+                    <label htmlFor="email">Email:</label>
+                    <input type="email"
+                        id="email"
+                        onChange={(event) => {
+                            setEmail(event.target.value)
+                        }}
+                        required
+                    />
+                </div>
+                <div className="forms">
+                    <label htmlFor="password">Senha:</label>
+                    <input type="password"
+                        id="password"
+                        onChange={(event) => {
+                            setPassword(event.target.value)
+                        }}
+                        required
                     />
                 </div>
                 <button type="submit" className="bt">
