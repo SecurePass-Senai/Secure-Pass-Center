@@ -41,15 +41,15 @@ export default function Cadastro() {
         formData.append("sessao", sessao)
 
 
-        api.post("users", formData).then((response) => {
-            console.log(response)
-            alert("usuario cadastrado com sucesso!")
-            //navegacao para login
+        // api.post("users", formData).then((response) => {
+        //     console.log(response)
+        //     alert("usuario cadastrado com sucesso!")
+        //     //navegacao para login
 
-        }).catch((error) => {
-            console.log(error)
-            alert("Deu erro aqui em! "+ error)
-        })
+        // }).catch((error) => {
+        //     console.log(error)
+        //     alert("Deu erro aqui em! "+ error)
+        // })
 
 
     }
