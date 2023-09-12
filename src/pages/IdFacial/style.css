@@ -86,7 +86,7 @@
     height: 50px;
     border-radius: 100px;
     text-decoration: none;
-    font-family: var(--font1_montserrat);
+    font-family: var(--font4_lato);
     color: var(--branco);
     box-shadow: 10px 13px 10px -7px rgba(0, 0, 0, 0.56);
     border: var(--azulborda) solid 1px;
@@ -128,6 +128,11 @@
     /* Sexto Commit 26/06 */
 
     @media screen and (max-width: 550px) {
+
+header{
+    display: none;
+}
+
         .modulo {
             height: 70px;
             margin-top: 75px;
@@ -147,52 +152,24 @@
         align-items: center;
         justify-content: center;
         height: 530px;
-        margin-top: -90px;
+        margin-top: 20px;
     
     }
     .reconhecimento img {
-        width: 175px;
-        margin: 0px 50px;
-        border: 20px;
-    
-    
+        width: 240px;
     }
 
     .botoes_footer {
-        width: 60%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 0 auto;
-        margin-top: -17PX;
+        display: none;
     
     
     }
 
-    .customer_btn  {
-        background: var(--azulbotao);
-        /* padding: 10px 100px; */
-        width: 200px;
-        height: 50px;
-        border-radius: 100px;
-        text-decoration: none;
-        font-family: var(--font1_montserrat);
-        color: var(--branco);
-        box-shadow: 10px 13px 10px -7px rgba(0, 0, 0, 0.56);
-        border: var(--azulborda) solid 1px;
-        text-transform: capitalize;
-        margin-top: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-    }
     .elementos{
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        margin-top: -26px;
+       
         height: 510px;
     }
     }

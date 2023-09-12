@@ -1,5 +1,6 @@
 import "./style.css"
 import Validacao from "../../assets/img/Validacao.png"
+import Rosto from "../../assets/img/rosto.png"
 
 export default function IdFacial(){
     return(
@@ -10,7 +11,7 @@ export default function IdFacial(){
           <h2>deteccao de rosto</h2>
           <p>verificacao concluida com sucesso</p>
         </div>
-        <img src={Validacao} alt="" />
+        <img src={Rosto} alt="" />
       </section>
       <section className="botoes_footer">
         <a className="customer_btn" href="../../Home/home.html">
