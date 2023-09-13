@@ -72,7 +72,7 @@ export default function Cadastro() {
     return (
 
         <main className="_cadastro">
-           <center> <h1>Cadastro</h1></center>
+           {/* <center> <h2>Cadastro</h2></center> */}
             <form onSubmit={cadastrarUsers} className="formulario"  method="POST">
                 <div className="forms">
                     <label htmlFor="nome">Nome:</label>
