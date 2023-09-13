@@ -5,14 +5,14 @@ import Header from './components/Header'
 import './index.css'
 import Cadastro from './pages/Cadastro'
 import IdFacial from './pages/IdFacial'
-// import Acoes from './pages/Acoes'
+import Acoes from './pages/Acoes'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Header/>
     {/* <App /> */}
-    {/* <Acoes /> */}
+    {<Acoes />}
     {/* <Cadastro /> */}
-    <IdFacial/> 
+    {/* <IdFacial/>  */}
   </React.StrictMode>,
 )
