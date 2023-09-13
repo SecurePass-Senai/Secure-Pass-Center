@@ -159,19 +159,8 @@ export default function Cadastro() {
                     Salvar
                 </button>
             </form>
-            <nav className="menu_ss">
-                <div className="btn_cadastrar edi ">
-                    <a href="../Home/home.html">HOME</a>
-                </div>
-                <div className="btn_cadastrar hom">
-                    <a href="../acoes/Home/acoes.html">ACOES</a>
-                </div>
-                <div className="btn_cadastrar hom">
-                    <a href="../perfil/perfil.html">PERFIL</a>
-                </div>
-                <div className="btn_cadastrar hom">
-                    <a href="../BiometriaSur5/index.html">SAIR</a>
-                </div>
+            <nav>
+                
             </nav>
         </main>
 
