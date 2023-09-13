@@ -3,7 +3,13 @@ import "./style.css"
 import api from "../../utils/api";
 
 export default function Cadastro() {
-
+/*
+ * Como um pré-requisito de qualquer cadastro, deverá ser chamado um email e senha para poder salvar (pelo menos no JSON server!)
+ * para ver se está funcionando corretamente foi acrescentado 2 (dois) campos no formulário de cadastro que podem ou não sofrer 
+ * algum tipo de alteração futura!.
+ * 
+ * att. Murilo Ferreira
+*/
 
     const [matricula, setMatricula] = useState<string>("")
     const [nome, setNome] = useState<string>("")
@@ -11,26 +17,32 @@ export default function Cadastro() {
     const [dataNasc, setDataNasc] = useState<string>("")
     const [funcao, setFuncao] = useState<string>("")
     const [sessao, setSessao] = useState<string>("")
+    const [email, setEmail] = useState<string>("")
+    const [password, setPassword] = useState<string>("")
+
+
 
 
 
 
     
-    // function mascaraDataNasc(event: any) {
-    //     let valorDigitado = event.target.value; 
+    function mascaraDataNasc(event: any) {
+        let valorDigitado = event.target.value; 
 
-    //     if (!valorDigitado) return ""; 
+        if (!valorDigitado) return ""; 
 
-    //     valorDigitado = valorDigitado.replace(/\D/g, ''); 
-    //     valorDigitado = valorDigitado.replace(/(\d{2})(\d{2})(\d{2})/, '$1/$2/$3'); 
-    //     console.log(valorDigitado)
-    //     event.target.value = valorDigitado;
-    // }
+        valorDigitado = valorDigitado.replace(/\D/g, ''); 
+        valorDigitado = valorDigitado.replace(/(\d{2})(\d{2})(\d{2})/, '$1/$2/$3'); 
+        console.log(valorDigitado)
+        event.target.value = valorDigitado;
+    }
+
+    
 
     function cadastrarUsers(event: any) {
 
         event.preventDefault();
-
+        
         const formData = new FormData()
 
         formData.append("matricula", matricula)
@@ -39,7 +51,10 @@ export default function Cadastro() {
         formData.append("dataNasc", dataNasc)
         formData.append("funcao", funcao)
         formData.append("sessao", sessao)
+        formData.append("email", email)
+        formData.append("password", password)
 
+        
 
         // api.post("users", formData).then((response) => {
         //     console.log(response)
@@ -54,12 +69,10 @@ export default function Cadastro() {
 
     }
 
-
-
     return (
 
         <main className="_cadastro">
-           <center> <h1>Cadastro</h1></center>
+           {/* <center> <h2>Cadastro</h2></center> */}
             <form onSubmit={cadastrarUsers} className="formulario"  method="POST">
                 <div className="forms">
                     <label htmlFor="nome">Nome:</label>
@@ -119,7 +132,27 @@ export default function Cadastro() {
                             setDataNasc(event.target.value)
                         }}
                         required
-                        // onKeyUp={mascaraDataNasc}
+                        onKeyUp={mascaraDataNasc}
+                    />
+                </div>
+                <div className="forms">
+                    <label htmlFor="email">Email:</label>
+                    <input type="email"
+                        id="email"
+                        onChange={(event) => {
+                            setEmail(event.target.value)
+                        }}
+                        required
+                    />
+                </div>
+                <div className="forms">
+                    <label htmlFor="password">Senha:</label>
+                    <input type="password"
+                        id="password"
+                        onChange={(event) => {
+                            setPassword(event.target.value)
+                        }}
+                        required
                     />
                 </div>
                 <button type="submit" className="bt">

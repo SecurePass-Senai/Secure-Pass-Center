@@ -32,12 +32,12 @@ main {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    margin-top: -20px;
+    margin-top: -90px;
 }
 
 .formulario {
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 630px;
     background-color: #FFFFFF;
     border-radius: 10%;
     display: flex;
@@ -62,7 +62,7 @@ main {
     padding-bottom: 5PX;
     color: black;
     font-family: var(--font2);
-
+    font-size: 13px;
     margin-top: 5px;
     top: 2PX;
 }
