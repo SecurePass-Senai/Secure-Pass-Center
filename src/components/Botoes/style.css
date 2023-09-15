@@ -1,0 +1,53 @@
+/* 
+:root {
+    --branco: #FFFFFF;
+
+    --font1: 'Lato', sans-serif;
+    --font2: 'Montserrat', sans-serif;
+
+}
+
+.menu_ss {
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+
+}
+
+.menu_ss a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+
+
+    width: 130px;
+    height: 50px;
+    padding: 15px 0;
+    position: relative;
+
+
+
+    font-family: var(--font2);
+    font-weight: 600;
+    text-align: center;
+    font-size: 15px;
+    color: var(--branco);
+    background: #1A7CA6;
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 46.5px;
+    text-decoration: none;
+
+
+}
+
+
+.menu_ss a:hover {
+    background-color: orange;
+    color: #000;
+    text-decoration-color: black;
+    text-decoration: none;
+} */

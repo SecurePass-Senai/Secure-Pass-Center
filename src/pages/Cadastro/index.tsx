@@ -159,7 +159,7 @@ export default function Cadastro() {
                     Salvar
                 </button>
             </form>
-            <nav className="menu_ss">
+            {/* <nav className="menu_ss">
                 <div className="btn_cadastrar edi ">
                     <a href="../Home/home.html">HOME</a>
                 </div>
@@ -172,7 +172,7 @@ export default function Cadastro() {
                 <div className="btn_cadastrar hom">
                     <a href="../BiometriaSur5/index.html">SAIR</a>
                 </div>
-            </nav>
+            </nav> */}
         </main>
 
 
