@@ -25,6 +25,11 @@ body {
 
 }
 
+/* deixa todos os Placeholder do cadastro estilizados */
+::-webkit-input-placeholder  { color:rgb(0, 0, 0); font-family: var(--font2);}
+
+
+
 main {
     display: grid;
     top: 200px;
@@ -37,7 +42,7 @@ main {
 
 .formulario {
     width: 450px;
-    height: 630px;
+    height: 600px;
     background-color: #FFFFFF;
     border-radius: 10%;
     display: flex;
@@ -66,6 +71,8 @@ main {
     margin-top: 5px;
     top: 2PX;
 }
+
+
 
 form input {
     height: 33px;

@@ -75,8 +75,8 @@ export default function Cadastro() {
            {/* <center> <h2>Cadastro</h2></center> */}
             <form onSubmit={cadastrarUsers} className="formulario"  method="POST">
                 <div className="forms">
-                    <label htmlFor="nome">Nome:</label>
-                    <input type="text"
+                    <label htmlFor="nome"/>
+                    <input type="text" placeholder="Nome"
                         id="nome"
                         onChange={(event) => {
                             setNome(event.target.value)
@@ -85,8 +85,8 @@ export default function Cadastro() {
                     />
                 </div>
                 <div className="forms">
-                    <label htmlFor="matricula">Numero da Matricula:</label>
-                    <input type="text"
+                    <label htmlFor="matricula"/>
+                    <input type="text" placeholder="Numero da Matricula"
                         id="matricula"
                         onChange={(event) => {
                             setMatricula(event.target.value)
@@ -95,8 +95,8 @@ export default function Cadastro() {
                     />
                 </div>
                 <div className="forms">
-                    <label htmlFor="setor">Setor:</label>
-                    <input type="text"
+                    <label htmlFor="setor"/>
+                    <input type="text" placeholder="Setor"
                         id="setor"
                         onChange={(event) => {
                             setSetor(event.target.value)
@@ -105,8 +105,8 @@ export default function Cadastro() {
                     />
                 </div>
                 <div className="forms">
-                    <label htmlFor="sessao">Sessao:</label>
-                    <input type="text"
+                    <label htmlFor="sessao"/>
+                    <input type="text" placeholder="Sessao"
                         id="sessao"
                         onChange={(event) => {
                             setSessao(event.target.value)
@@ -115,8 +115,8 @@ export default function Cadastro() {
                     />
                 </div>
                 <div className="forms">
-                    <label htmlFor="funcao">Funcao:</label>
-                    <input type="text"
+                    <label htmlFor="funcao"/>
+                    <input type="text" placeholder="Funcao"
                         id="funcao"
                         onChange={(event) => {
                             setFuncao(event.target.value)
@@ -125,8 +125,8 @@ export default function Cadastro() {
                     />
                 </div>
                 <div className="forms">
-                    <label htmlFor="dataNasc">Data de Nascimento:</label>
-                    <input type="text"
+                    <label htmlFor="dataNasc"/>
+                    <input type="text" placeholder="Data de Nascimento"
                         id="dataNasc"
                         onChange={(event) => {
                             setDataNasc(event.target.value)
@@ -136,8 +136,8 @@ export default function Cadastro() {
                     />
                 </div>
                 <div className="forms">
-                    <label htmlFor="email">Email:</label>
-                    <input type="email"
+                    <label htmlFor="email"/>
+                    <input type="email" placeholder="E-Mail"
                         id="email"
                         onChange={(event) => {
                             setEmail(event.target.value)
@@ -146,8 +146,8 @@ export default function Cadastro() {
                     />
                 </div>
                 <div className="forms">
-                    <label htmlFor="password">Senha:</label>
-                    <input type="password"
+                    <label htmlFor="password"/>
+                    <input type="password" placeholder="Senha"
                         id="password"
                         onChange={(event) => {
                             setPassword(event.target.value)
