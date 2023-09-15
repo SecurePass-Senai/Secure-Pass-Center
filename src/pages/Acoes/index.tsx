@@ -26,9 +26,9 @@ export default function Acoes() {
 
         <main>
   <section>
-    <h2>Tabela de Logs</h2>
+    <center><h2>Tabela de Logs</h2></center>
     <table>
-      <caption>Tabela de Logs</caption>
+      {/* <caption>Tabela de Logs</caption> */}
       <thead>
         <tr>
           <th>Nome do Funcionario</th>
