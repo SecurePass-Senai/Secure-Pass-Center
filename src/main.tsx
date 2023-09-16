@@ -7,18 +7,18 @@ import Header from './components/Header'
 
 // import App from './App.tsx'
 import './index.css'
-// import Cadastro from './pages/Cadastro'
-// import Acoes from './pages/Acoes'
-import EntradaIdFacial from './pages/EntradaIdFacial'
+import Cadastro from './pages/Cadastro'
+import Acoes from './pages/Acoes'
+// import EntradaIdFacial from './pages/EntradaIdFacial'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Header/>
     {/* <App /> */}
 
-    {/* <Acoes /> */}
+    <Acoes />
     {/* <Cadastro /> */}
-    <EntradaIdFacial />
+    {/* <EntradaIdFacial /> */}
 
     {/* <Botoes /> */}
 

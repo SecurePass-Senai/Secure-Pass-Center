@@ -10,25 +10,16 @@ export default function CardLogs(props : any) {
      * 
      * att. Murilo Ferreira
     */
-    function dadosConvertidos() {
 
-      return JSON.parse(props.nome)
-
-    }
 
     return(
         //teste para saber se o CardLog está sendo exibido na pagina de ações...
-        <tr className="linha-mensagem">
-          {
-                   dadosConvertidos().map((nome: string, index: number) => {
-                        return <th key={index}>{nome}</th>
-                    })
-                }
-          
-          <th>Montador</th>
-          <th>405</th>
-          <th>06/09/2023 - 11:46:08</th>
-        </tr>
+        <>
+          <th>{props.nome}</th>
+          <th>{props.funcao}</th>
+          <th>{props.sessao}</th>
+          <th>{props.id}</th>
+          </>
 
     )
 
