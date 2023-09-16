@@ -1,0 +1,133 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+:root {
+    --branco: #FFFFFF;
+
+    --font1: 'Lato', sans-serif;
+    --font2: 'Montserrat', sans-serif;
+
+}
+
+body{
+    background-image: url(../../img/Backgronud.png);
+}
+
+h2{
+    color: black;
+    display: flex;
+    justify-content: center;
+
+    padding-top: 15px;
+}
+
+/* definindo o tamanho da table */
+
+
+.emglobador{
+   
+    width:100%;
+    margin: auto;
+    margin-left:130%;
+    font-family: var(--font1);
+    background-color: var(--branco);
+    border-radius: 30px;
+}
+.emglobador span{
+
+    display: flex;
+    justify-content: left;
+    color: black;
+    margin-left: 30px;
+    padding-top: 50px;
+    text-transform: uppercase;
+
+    
+}
+/* configurando o traço */
+/* hr {
+	border: 0;
+	border-top: 0.5px solid gray;
+    margin: 5px 5px 5px 5px;
+} */
+
+.tabelaPerfil{
+    display: flex;
+    flex-direction: row;
+    color: black;
+    margin-top: 10px;
+
+}
+
+/* definindo o espaçamento das informações  */
+.tabelaPerfil th, .tabelaPerfil td{
+    padding: 0.5rem;
+    
+}
+
+/* orientando as informações em paralelo */
+.esquerda th{
+    display: flex;
+    flex-basis: 100%;
+    margin-right: 10px;
+    padding-left: 30px ;
+}
+
+.direita tr{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 25px;
+    
+}
+.direita th {
+    list-style-type: none;
+}
+
+/* Alinhando o P */
+
+p {
+  text-align: left;
+  color: #2b961f;
+  text-transform: uppercase;
+  padding-left: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+    padding-bottom: 5px;
+
+}
+
+
+
+
+/* Responsividade da tabela */
+
+@media screen and (max-width: 1049px) {
+    h2,
+    p,
+    span,
+    .esquerda th,
+    .direita tr,
+    .direita th{
+        font-size: small;
+        
+    }
+    .emglobador span{
+        padding-top: 0%;
+    }
+    .emglobador{
+        width:80%;
+        margin: auto;
+        margin-left:50%;
+        font-family: var(--font1);
+        background-color: var(--branco);
+        border-radius: 30px;
+    }
+
+ 
+
+}
+   
