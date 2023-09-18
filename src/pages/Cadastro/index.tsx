@@ -25,6 +25,7 @@ export default function Cadastro() {
 
 
 
+
     
     function mascaraDataNasc(event: any) {
         let valorDigitado = event.target.value; 
@@ -37,8 +38,7 @@ export default function Cadastro() {
         event.target.value = valorDigitado;
     }
 
-    
-
+  
     function cadastrarUsers(event: any) {
 
         event.preventDefault();
@@ -53,6 +53,7 @@ export default function Cadastro() {
         formData.append("sessao", sessao)
         formData.append("email", email)
         formData.append("password", password)
+       
 
         
 
