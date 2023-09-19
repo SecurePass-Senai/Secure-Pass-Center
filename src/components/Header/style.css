@@ -36,10 +36,10 @@
 }
 
 .header_texto, .menu_ss{
-  /* padding-left: 10px; */
+  padding-top: 10px;
   display: flex;
   justify-content: space-between;
-  height: 90px;
+  height: 50px;
   flex-direction: row;
   align-items: center;
   
@@ -114,7 +114,7 @@
 
 
 
-  font-family: var(--font2);
+  font-family: var(--font1_montserrat);
   font-weight: 600;
   text-align: center;
   font-size: 15px;

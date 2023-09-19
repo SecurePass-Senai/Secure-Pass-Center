@@ -1,5 +1,6 @@
 import "./style.css"
 import Logo from "../../assets/img/Logo.png"
+import {Link} from "react-router-dom";
 
 export default function Header() {
 
@@ -15,18 +16,18 @@ export default function Header() {
 
           <div className="menu">
             <nav className="menu_ss">
-              <a className="btn_cadastrar" href="../cadastro/cadastro.html">CADASTRAR</a>
+              <Link to='Cadastro' className="btn_cadastrar">Cadastrar</Link>
               
               
-              <a className="btn_cadastrar" href="../acoes/Home/acoes.html">ACOES</a>
-              
-              
-              
-              <a className="btn_cadastrar" href="../perfil/perfil.html">PERFIL</a>
+              <Link to='Acoes' className="btn_cadastrar">Ações</Link>
               
               
               
-              <a className="btn_cadastrar" href="../BiometriaSur5/index.html">SAIR</a>
+              <a className="btn_cadastrar" href="../perfil/perfil.html">Perfil</a>
+              
+              
+              
+              <a className="btn_cadastrar" href="../BiometriaSur5/index.html">Sair</a>
               
               
             </nav>
