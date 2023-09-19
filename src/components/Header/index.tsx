@@ -19,7 +19,7 @@ export default function Header() {
               <Link to='Cadastro' className="btn_cadastrar">Cadastrar</Link>
               
               
-              <Link to='Acoes' className="btn_cadastrar">Ações</Link>
+              <Link to='logs' className="btn_cadastrar">Ações</Link>
               
               
               
