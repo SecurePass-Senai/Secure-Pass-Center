@@ -1,0 +1,37 @@
+
+:root {
+    --branco: #FFFFFF;
+
+    --font1: 'Lato', sans-serif;
+    --font2: 'Montserrat', sans-serif;
+
+}
+
+
+h2{
+    color: black;
+    display: flex;
+    justify-content: center;
+
+    padding-top: 5px;
+}
+
+
+.users tr{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 50px;
+    
+}
+.users th {
+    list-style-type: none;
+}
+
+/* Responsividade da tabela */
+
+@media screen and (max-width: 800px) {
+
+
+}
+   

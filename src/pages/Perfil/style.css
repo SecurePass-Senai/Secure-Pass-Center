@@ -1,0 +1,155 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+:root {
+    --branco: #FFFFFF;
+
+    --font1: 'Lato', sans-serif;
+    --font2: 'Montserrat', sans-serif;
+
+}
+
+
+
+h2 {
+    color: black;
+    display: flex;
+    justify-content: center;
+
+    padding-top: 15px;
+}
+
+/* definindo o tamanho da table */
+/* 
+.cry {
+    width: 500px;
+    height: 500px;
+    margin-left: 30%;
+    background-color: var(--branco);
+    border-radius: 30px;
+} */
+
+.emglobador {
+
+    width: 40%;
+    margin: auto;
+    height: 500px;
+    /* margin-left:10%; */
+    font-family: var(--font1);
+    background-color: var(--branco);
+    border-radius: 30px;
+    
+}
+
+.emglobador span {
+
+    display: flex;
+    justify-content: left;
+    color: black;
+    margin-left: 30px;
+    padding-top: 50px;
+    text-transform: uppercase;
+
+
+}
+
+/* configurando o traço */
+
+.tabelaPerfil {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    margin-top: 10px;
+
+}
+
+/* definindo o espaçamento das informações  */
+.tabelaPerfil th,
+.tabelaPerfil td {
+    padding: 0.5rem;
+
+}
+
+/* orientando as informações em paralelo */
+.esquerda th {
+    display: flex;
+    flex-basis: 100%;
+    /* margin-right: 10px; */
+    padding-left: 30px;
+}
+
+.direita tr {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 25px;
+
+}
+
+.direita th {
+    list-style-type: none;
+}
+
+/* Alinhando o P */
+
+.verificado {
+    margin-bottom: 50px;
+}
+
+.status p {
+    font-family: var(--font1);
+    text-align: left;
+    color: #2b961f;
+    text-transform: uppercase;
+    padding-left: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    padding-bottom: 5px;
+
+}
+
+.status {
+    color: #2b961f;
+    font-size: 20px;
+    margin-top: -100px;
+    width: 40%;
+    margin-left: 30%;
+    /* font-weight: bold; */
+}
+
+
+
+
+/* Responsividade da tabela */
+
+@media screen and (max-width: 1049px) {
+
+    h2,
+    p,
+    span,
+    .esquerda th,
+    .direita tr,
+    .direita th {
+        font-size: small;
+
+    }
+
+    .emglobador span {
+        padding-top: 0%;
+    }
+
+    .emglobador {
+        width: 80%;
+        margin: auto;
+        margin-left: 50%;
+        font-family: var(--font1);
+        background-color: var(--branco);
+        border-radius: 30px;
+    }
+
+
+
+}

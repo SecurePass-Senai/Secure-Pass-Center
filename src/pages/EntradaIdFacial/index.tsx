@@ -1,5 +1,5 @@
 import "./style.css"
-import FaceID from "../../assets/img/Logo.png"
+import FaceID from "../../assets/img/teste-4.gif"
 
 export default function EntradaIdFacial (){
 
