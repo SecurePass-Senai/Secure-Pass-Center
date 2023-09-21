@@ -39,7 +39,7 @@ function Perfil() {
     return (
         <>
             <section className='emglobador'>
-                        <h2>Perfil</h2>
+                        <h2 className="_titulo">Perfil</h2>
                         {/* adicionar imagem do usuario aqui */}
                         
                         <span>#administrador</span>
@@ -63,8 +63,8 @@ function Perfil() {
                                     id={user.id}
                                     matricula={user.matricula}
                                     nome={user.nome}
-                                    area={user.area}
-                                    dataNascimento={user.dataNascimento}
+                                    setor={user.setor}
+                                    dataNasc={user.dataNasc}
                                     funcao={user.funcao}
                                     sessao={user.sessao}
 

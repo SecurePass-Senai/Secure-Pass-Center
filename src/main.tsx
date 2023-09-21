@@ -13,6 +13,8 @@ import Cadastro from './pages/Cadastro'
 import EntradaIdFacial from './pages/EntradaIdFacial'
 import Acoes from './pages/Acoes'
 import Perfil from './pages/Perfil'
+import IdFacial from './pages/IdFacial'
+import IdFacialAprovado from './pages/IdFacialAprovado'
 
 
 
@@ -23,9 +25,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Header />
     
       <Routes>
+        <Route path='idfacial' element={<IdFacial/>}/>
+        <Route path='idfacialaprovado' element={<IdFacialAprovado/>}/>
         <Route path='/' element={<EntradaIdFacial/>}/>
         <Route path='cadastro' element={<Cadastro/>}/>
-        <Route path='entrada' element={<EntradaIdFacial/>}/>
         <Route path='logs' element={<Acoes/>}/>
         <Route path='perfil/:id' element={<Perfil/>}/>
     

@@ -23,11 +23,11 @@ export default function Header() {
               
               
               
-              <a className="btn_cadastrar" href="../perfil/perfil.html">Perfil</a>
+             <Link to='perfil/1' className="btn_cadastrar">Perfil</Link>
               
               
               
-              <a className="btn_cadastrar" href="../BiometriaSur5/index.html">Sair</a>
+              <Link to='/' className="btn_cadastrar">Sair</Link>
               
               
             </nav>

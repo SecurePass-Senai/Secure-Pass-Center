@@ -1,5 +1,6 @@
 import "./style.css"
-import FaceID from "../../assets/img/teste-4.gif"
+import FaceID from "../../assets/img/rostogifavaivaivai.gif"
+import { Link } from "react-router-dom"
 
 export default function EntradaIdFacial (){
 
@@ -16,9 +17,9 @@ return(
     />
   </div>
   <div className="btn">
-    <a href="" className="botao_principal">
+    <Link to='idfacial' className="botao_principal">
       Face ID
-    </a>
+    </Link>
   </div>
 </div>
 
