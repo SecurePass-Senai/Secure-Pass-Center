@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./style.css"
 import api from "../../utils/api";
+import Stepper from "awesome-react-stepper";
 
 export default function Cadastro() {
 /*
@@ -19,6 +20,7 @@ export default function Cadastro() {
     const [sessao, setSessao] = useState<string>("")
     const [email, setEmail] = useState<string>("")
     const [password, setPassword] = useState<string>("")
+   
 
 
 
@@ -41,7 +43,7 @@ export default function Cadastro() {
   
     function cadastrarUsers(event: any) {
 
-        event.preventDefault();
+        //event.preventDefault();
         
         const formData = new FormData()
 
@@ -74,10 +76,21 @@ export default function Cadastro() {
 
         <main className="_cadastro">
            {/* <center> <h2>Cadastro</h2></center> */}
+           
+           <Stepper
+      strokeColor="#00FFFF"//linha :)
+      fillStroke="#00FFFF"
+      activeColor="#00CED1"
+      activeProgressBorder="2px solid #00CED1"
+      submitBtn={<button  type="submit" className="onSubmit">Salvar</button>}
+      continueBtn={<button className="continueBtn">Proximo</button>}
+      backBtn={<button className="stepperBtn">Voltar</button>}
+      onSubmit={cadastrarUsers}
+    >
             <form onSubmit={cadastrarUsers} className="formulario"  method="POST">
                 <div className="forms">
-                    <label htmlFor="nome"/>
-                    <input type="text" placeholder="Nome"
+                    <label htmlFor="nome"/>Digite seu Nome:
+                    <input type="text"
                         id="nome"
                         onChange={(event) => {
                             setNome(event.target.value)
@@ -86,8 +99,8 @@ export default function Cadastro() {
                     />
                 </div>
                 <div className="forms">
-                    <label htmlFor="matricula"/>
-                    <input type="text" placeholder="Numero da Matricula"
+                    <label htmlFor="matricula"/>Digite a Matricula:
+                    <input type="text" 
                         id="matricula"
                         onChange={(event) => {
                             setMatricula(event.target.value)
@@ -96,8 +109,8 @@ export default function Cadastro() {
                     />
                 </div>
                 <div className="forms">
-                    <label htmlFor="setor"/>
-                    <input type="text" placeholder="Setor"
+                    <label htmlFor="setor"/>Digite o Setor:
+                    <input type="text" 
                         id="setor"
                         onChange={(event) => {
                             setSetor(event.target.value)
@@ -105,9 +118,11 @@ export default function Cadastro() {
                         required
                     />
                 </div>
+                </form>
+                <form onSubmit={cadastrarUsers} className="formulario"  method="POST">
                 <div className="forms">
-                    <label htmlFor="sessao"/>
-                    <input type="text" placeholder="Sessao"
+                    <label htmlFor="sessao"/>digite a Sessao:
+                    <input type="text" 
                         id="sessao"
                         onChange={(event) => {
                             setSessao(event.target.value)
@@ -116,8 +131,8 @@ export default function Cadastro() {
                     />
                 </div>
                 <div className="forms">
-                    <label htmlFor="funcao"/>
-                    <input type="text" placeholder="Funcao"
+                    <label htmlFor="funcao"/>Digite sua Funcao:
+                    <input type="text" 
                         id="funcao"
                         onChange={(event) => {
                             setFuncao(event.target.value)
@@ -126,8 +141,8 @@ export default function Cadastro() {
                     />
                 </div>
                 <div className="forms">
-                    <label htmlFor="dataNasc"/>
-                    <input type="text" placeholder="Data de Nascimento"
+                    <label htmlFor="dataNasc"/>Informe a data de Nascimento:
+                    <input type="text" 
                         id="dataNasc"
                         onChange={(event) => {
                             setDataNasc(event.target.value)
@@ -136,9 +151,11 @@ export default function Cadastro() {
                         onKeyUp={mascaraDataNasc}
                     />
                 </div>
+                </form>
+                <form onSubmit={cadastrarUsers} className="formulario"  method="POST">
                 <div className="forms">
-                    <label htmlFor="email"/>
-                    <input type="email" placeholder="E-Mail"
+                    <label htmlFor="email"/>Digite seu E-Mail:
+                    <input type="email" 
                         id="email"
                         onChange={(event) => {
                             setEmail(event.target.value)
@@ -147,8 +164,8 @@ export default function Cadastro() {
                     />
                 </div>
                 <div className="forms">
-                    <label htmlFor="password"/>
-                    <input type="password" placeholder="Senha"
+                    <label htmlFor="password"/>Digite uma Senha:
+                    <input type="password" 
                         id="password"
                         onChange={(event) => {
                             setPassword(event.target.value)
@@ -156,13 +173,11 @@ export default function Cadastro() {
                         required
                     />
                 </div>
-                <button type="submit" className="bt">
-                    Salvar
-                </button>
+               
             </form>
-            <nav>
-                
-            </nav>
+            
+            </Stepper>
+            
         </main>
 
 

@@ -31,16 +31,16 @@ export default function Acoes() {
         <center><h2>Tabela de Logs</h2></center>
         <table>
           {/* <caption>Tabela de Logs</caption> */}
-          <thead>
-            <tr>
+          <thead className="tabela">
+            <tr className="tabela">
               <th>Nome do Funcionario</th>
               <th>Função</th>
               <th>Sessão</th>
-              <th>Id Do Usuario</th>
+              <th>Horario de Acesso</th>
             </tr>
             {users.map((user: any, index: any) => {
 
-              return <tr key={index}>
+              return <tr key={index} className="tabela">
                 <CardLogs
                   nome={user.nome}
                   funcao={user.funcao}

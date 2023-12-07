@@ -28,7 +28,13 @@ body {
 /* deixa todos os Placeholder do cadastro estilizados */
 ::-webkit-input-placeholder  { color:rgb(0, 0, 0); font-family: var(--font2);}
 
-
+.stepperDiv {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 ._cadastro {
     display: grid;
@@ -40,9 +46,10 @@ body {
     
 }
 
+
 ._cadastro .formulario {
     width: 450px;
-    height: 600px;
+    height: 300px;;
     background-color: #FFFFFF;
     border-radius: 10%;
     display: flex;
@@ -67,10 +74,13 @@ body {
     padding-bottom: 5PX;
     color: black;
     font-family: var(--font2);
-    font-size: 13px;
-    margin-top: 5px;
-    top: 2PX;
+    font-size: 20px;
+    
+   
+    
 }
+
+
 
 
 

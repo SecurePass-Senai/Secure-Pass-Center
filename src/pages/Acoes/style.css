@@ -72,6 +72,11 @@
 
 ._acoes caption {
   font-size: 20px;
+  
+}
+
+._acoes .tabela {
+  border: 1px solid #87CEFA;
 }
 
 ._acoes caption, th {
@@ -89,7 +94,7 @@
 
 ._acoes th, tr, td {
   color-scheme: dark; 
-  border: none;
+  
 }
 
 ._acoes .linha-mensagem td {
@@ -98,6 +103,7 @@
 
 ._acoes caption, th, td {
   padding: 15px;
+  
 }
 
 ._acoes .botao-tabela {

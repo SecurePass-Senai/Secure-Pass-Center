@@ -54,7 +54,7 @@ function Perfil() {
                                     <th>Função</th>
                                     <th>Sessão</th>
                                 </tr>
-
+                                
                             </thead>
                             <tbody className="direita">
                                 {/* Necessário verificar o login do usuário para as informações serem puxadas adequadamente  */}
