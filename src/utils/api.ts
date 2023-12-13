@@ -1,7 +1,33 @@
+/**
+ *  Modulo para trabalhar com apis. Disponibiliza as rotas da api bem como o servico com a biblioteca axios
+ */
 import axios from "axios";
 
-const api = axios.create({
-    baseURL: "http://localhost:3000/",
-})
 
-export default api
+/**
+ *  Rota para o recursoMachine
+ */
+export const machineResource = '/machine'
+
+// Rota para Types User
+export const typesUserResource = '/types'
+
+// Rota para Users
+export const usersResource = '/users'
+
+
+// Rota para User Machine
+export const userMachineResource = '/user-machine'
+
+
+
+const apiPort = '8080';
+ const localApiUri = `http://localhost:${apiPort}`;
+
+
+const api = axios.create({
+     baseURL:localApiUri
+    //baseURL:externalApiUri
+});
+
+export default api;

@@ -37,20 +37,19 @@ h1 {
 
 
 /* Texto da caixa background */
-.Detecção {
+.grid {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    font-family: var(--font2);
-    color: var(--branco);
-    text-align: center;
-    font-size: 15px;
-    font-weight: bolder;
-    height: 127px;
-    width: 300px;
-    background-color: #000000;
-    font-size: large;
-    border-radius: 15px;
+    align-items: center;
+    border-radius: 40px;
+   
+}
+
+.webCam {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
 }
 
 /* Alinhe seu rosto */
@@ -60,7 +59,7 @@ h1 {
     font-weight: 100;
 }
 
-.conteudo{
+.conteudo {
     display: flex;
     align-items: center;
     height: 650px;
@@ -77,35 +76,36 @@ h1 {
     align-items: center;
     justify-content: space-around;
     margin: 0 auto;
-    
-    
-    
-    
-    
+
+
+
+
+
 
 }
 
-.customer_btn a{
+.customer_btn a {
     background: var(--azulbotao);
     /* padding: 10px 100px; */
     width: 300px;
     height: 50px;
     border-radius: 100px;
     text-decoration: none;
-    font-family:var(--font1_montserrat) ;
+    font-family: var(--font1_montserrat);
     color: var(--branco);
-    box-shadow: 10px 13px 10px -7px rgba(0,0,0,0.56);
-    border: var(--azulborda) solid 1px ;
+    box-shadow: 10px 13px 10px -7px rgba(0, 0, 0, 0.56);
+    border: var(--azulborda) solid 1px;
     text-transform: capitalize;
     margin-top: 27px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
+
 @media screen and (max-width: 1117px) {
 
-    .conteudo{
+    .conteudo {
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -114,8 +114,8 @@ h1 {
         margin-top: 45px;
     }
 
-    .conteudo img{
+    .conteudo img {
         margin-left: 1%;
     }
-    
+
 }

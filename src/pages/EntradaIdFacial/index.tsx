@@ -1,8 +1,15 @@
 import "./style.css"
 import FaceID from "../../assets/img/rostogifavaivaivai.gif"
 import { Link } from "react-router-dom"
+import { useEffect } from "react"
 
 export default function EntradaIdFacial (){
+
+
+  useEffect(() => {
+    document.title = "SecurePass - Login"
+    
+  }, [])
 
 
 return(
@@ -17,9 +24,7 @@ return(
     />
   </div>
   <div className="btn">
-    <Link to='idfacial' className="botao_principal">
-      Face ID
-    </Link>
+    <Link to='idfacial' className="botao_principal">Face ID</Link>
   </div>
 </div>
 

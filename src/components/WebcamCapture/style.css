@@ -1,0 +1,12 @@
+.webcam-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.webcam-img{
+    justify-content: center;
+    align-items: center;
+
+}

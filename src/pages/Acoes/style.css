@@ -81,6 +81,7 @@
 
 ._acoes caption, th {
   text-align: left;
+  
 }
 
 ._acoes tbody > tr:nth-child(odd) {

@@ -15,10 +15,10 @@ export default function CardLogs(props : any) {
     return(
         //teste para saber se o CardLog está sendo exibido na pagina de ações...
         <>
-          <th className="tabela">{props.nome}</th>
-          <th className="tabela">{props.funcao}</th>
-          <th className="tabela">{props.sessao}</th>
-          <th className="tabela">{props.id}</th>
+          <th>{props.nome}</th>
+          <th>{props.funcao}</th>
+          <th>{props.sessao}</th>
+          <th>{props.id}</th>
           </>
 
     )

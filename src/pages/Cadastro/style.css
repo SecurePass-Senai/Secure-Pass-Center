@@ -26,7 +26,10 @@ body {
 }
 
 /* deixa todos os Placeholder do cadastro estilizados */
-::-webkit-input-placeholder  { color:rgb(0, 0, 0); font-family: var(--font2);}
+::-webkit-input-placeholder {
+    color: rgb(0, 0, 0);
+    font-family: var(--font2);
+}
 
 .stepperDiv {
     z-index: 3;
@@ -36,6 +39,9 @@ body {
     transform: translate(-50%, -50%);
 }
 
+
+
+
 ._cadastro {
     display: grid;
     top: 200px;
@@ -43,13 +49,14 @@ body {
     height: 100%;
     overflow: hidden;
     margin-top: 30px;
-    
+
 }
 
 
 ._cadastro .formulario {
     width: 450px;
-    height: 300px;;
+    height: 300px;
+    ;
     background-color: #FFFFFF;
     border-radius: 10%;
     display: flex;
@@ -60,6 +67,11 @@ body {
     position: relative;
     justify-self: center;
     align-self: center;
+    /* background-image: linear-gradient(45deg, #04184F, transparent)  */
+
+    background: linear-gradient(146deg, rgba(7, 47, 87, 0.20) 0%, rgba(7, 47, 87, 0.83) 98.56%);
+
+    backdrop-filter: blur(4px);
 
 
 }
@@ -72,23 +84,26 @@ body {
     flex-direction: column;
     padding: 12px;
     padding-bottom: 5PX;
-    color: black;
+    color: white;
     font-family: var(--font2);
     font-size: 20px;
-    
-   
-    
+
+
+
 }
-
-
-
 
 
 ._cadastro form input {
     height: 33px;
+    color: white;
+    background: linear-gradient(146deg, rgba(94, 114, 140, 0.2) 0%, rgba(94, 114, 140, 0.83) 98.56%);
+    border: transparent;
+    border-radius: 10px;
 
+}
 
-
+._cadastro form input::placeholder {
+    color: white
 }
 
 ._cadastro button {
@@ -111,8 +126,8 @@ body {
 }
 
 ._cadastro button:hover {
-    background-color: orange;
-    color: #000;
+    background-color: #042E54;
+    color: white;
 
 }
 
@@ -152,8 +167,8 @@ body {
 
 ._cadastro .btn_cadastrar:hover,
 ._cadastro .bt:hover {
-    background-color: orange;
-    color: #000;
+    background-color: #042E54;
+    color: white;
 
 }
 
@@ -172,8 +187,8 @@ body {
 ._cadastro nav a:hover,
 ._cadastro .bt:hover {
 
-    background-color: orange;
-    color: #000;
+    background-color: #042E54;
+    color: white;
 }
 
 ._cadastro .bt {

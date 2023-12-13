@@ -14,12 +14,12 @@
 
 
 
-._titulo{
-    color: black;
+._titulo {
+    color: white;
     display: flex;
     justify-content: center;
 
-    padding-top: 15px;
+    padding-top: 25px;
 }
 
 /* definindo o tamanho da table */
@@ -41,19 +41,27 @@
     font-family: var(--font1);
     background-color: var(--branco);
     border-radius: 30px;
-    
+    margin-top: 10%;
+    background: linear-gradient(146deg, rgba(7, 47, 87, 0.20) 0%, rgba(7, 47, 87, 0.83) 98.56%);
+
+    backdrop-filter: blur(4px);
+
+
 }
 
 .emglobador span {
 
     display: flex;
     justify-content: left;
-    color: black;
+    color: white;
     margin-left: 30px;
     padding-top: 50px;
     text-transform: uppercase;
+}
 
 
+.englobador hr {
+    color: rgba(7, 47, 87, 0.83);
 }
 
 /* configurando o traço */
@@ -70,22 +78,27 @@
 .tabelaPerfil th,
 .tabelaPerfil td {
     padding: 0.5rem;
-
+    margin-top: 15px;
+    
 }
 
 /* orientando as informações em paralelo */
 .esquerda th {
     display: flex;
+    color: white;
     flex-basis: 100%;
     /* margin-right: 10px; */
     padding-left: 30px;
+    margin-top: 30px;
 }
 
 .direita tr {
     display: flex;
+    color: white;
     flex-direction: column;
     text-align: right;
     padding-right: 25px;
+    margin-top: 30px;
 
 }
 
@@ -102,7 +115,7 @@
 .status p {
     font-family: var(--font1);
     text-align: left;
-    color: #2b961f;
+    /* color: #2b961f; */
     text-transform: uppercase;
     padding-left: 30px;
     font-weight: bold;
@@ -112,7 +125,7 @@
 }
 
 .status {
-    color: #2b961f;
+    /* color: #2b961f; */
     font-size: 20px;
     margin-top: -100px;
     width: 40%;
@@ -133,11 +146,13 @@
     .esquerda th,
     .direita tr,
     .direita th {
+        color: white;
         font-size: small;
 
     }
 
     .emglobador span {
+        color: white;
         padding-top: 0%;
     }
 

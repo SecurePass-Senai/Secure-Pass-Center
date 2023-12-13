@@ -111,8 +111,8 @@
   
   }
   
-  a:hover {
-    background-color: orange;
+  .btn a:hover {
+    background-color: rgb(255, 255, 255);
     color: #000;
   }
   
