@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./style.css"
-import api from "../../utils/api";
+import api, { usersResource } from "../../utils/api";
 import Stepper from "awesome-react-stepper";
 
 export default function Cadastro() {
@@ -20,6 +20,7 @@ export default function Cadastro() {
     const [sessao, setSessao] = useState<string>("")
     const [email, setEmail] = useState<string>("")
     const [password, setPassword] = useState<string>("")
+    const [arquivo,setArquivo] = useState<any>([])
 
 
 
@@ -41,34 +42,49 @@ export default function Cadastro() {
     }
 
 
-    function cadastrarUsers(event: any) {
+    async function cadastrarUsers(event: any) {
 
         //event.preventDefault();
 
         const formData = new FormData()
 
+        // const id = ("990e6c01-8fd8-11ee-b7e1-b445067b7d49")
+        const id = ("eab2240a-617d-4b04-a2f3-b0012af2af5e")
+        formData.append("id_tipousuario", id)
         formData.append("matricula", matricula)
         formData.append("nome", nome)
         formData.append("setor", setor)
-        formData.append("dataNasc", dataNasc)
+        formData.append("nascimento", "2000-03-05")
+        // formData.append("dataNasc", dataNasc)
         formData.append("funcao", funcao)
         formData.append("sessao", sessao)
         formData.append("email", email)
-        formData.append("password", password)
+        formData.append("face", arquivo)
 
 
 
 
-        api.post("users", formData).then((response) => {
-            console.log(response)
-            alert("usuario cadastrado com sucesso!")
-            //navegacao para login
+        // api.post(`users`, formData).then((response) => {
+        //     console.log(response)
+        //     alert("usuario cadastrado com sucesso!")
+        //     //navegacao para login
 
-        }).catch((error) => {
-            console.log(error)
-            alert("Deu erro aqui em! " + error)
+        // }).catch((error) => {
+        //     console.log(error)
+        //     alert("Deu erro aqui em! " + error)
+        // })
+
+
+        await api.post(usersResource, formData, {
+            headers : {
+                "content-type": "multipart/form-data"
+            }
+        }).then((resposta: any ) => {
+            console.log("teste");
+            console.log(resposta.data);
+            
+            
         })
-
 
     }
 
@@ -170,13 +186,24 @@ export default function Cadastro() {
                             required
                         />
                     </div>
-                    <div className="forms">
+                    {/* <div className="forms">
                         <label htmlFor="password" />Senha:
                         <input type="password"
                             placeholder="Senha"
                             id="password"
                             onChange={(event) => {
                                 setPassword(event.target.value)
+                            }}
+                            required
+                        />
+                    </div> */}
+
+                    <div className="forms">
+                        <label htmlFor="file" />Arquivo:
+                        <input type="file"
+                            id="file"
+                            onChange={event => {
+                                setArquivo(event.target.files[0])   
                             }}
                             required
                         />

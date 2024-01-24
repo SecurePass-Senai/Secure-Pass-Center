@@ -6,8 +6,8 @@ import "./style.css"
 const WebcamComponent = () => <Webcam />;
 
 const videoConstraints = {
-    width: 220,
-    height: 200,
+    width: 450,
+    height: 1080,
     facingMode: "user"
 };
 
@@ -32,12 +32,12 @@ export const WebcamCapture = () => {
         <div className="webcam-container">
             <div className="webcam-img">
 
-                {image == '' ? <Webcam
+                {image == '' ? <Webcam className="webcam-container"
                     audio={false}
-                    height={200}
+                    
                     ref={webcamRef}
                     screenshotFormat="image/jpeg"
-                    width={220}
+                   
                     videoConstraints={videoConstraints}
                 /> : <img src={image} />}
             </div>

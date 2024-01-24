@@ -54,13 +54,13 @@ body {
 
 
 ._cadastro .formulario {
-    width: 450px;
-    height: 300px;
+    width: 700px;
+    height: 450px;
     ;
     background-color: #FFFFFF;
     border-radius: 10%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
     padding: 12px;
@@ -78,7 +78,7 @@ body {
 
 ._cadastro .forms {
     height: 80px;
-    width: 400px;
+    width: 600px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -86,15 +86,14 @@ body {
     padding-bottom: 5PX;
     color: white;
     font-family: var(--font2);
-    font-size: 20px;
+    font-size: 25px;
 
 
 
 }
 
-
 ._cadastro form input {
-    height: 33px;
+    height: 50px;
     color: white;
     background: linear-gradient(146deg, rgba(94, 114, 140, 0.2) 0%, rgba(94, 114, 140, 0.83) 98.56%);
     border: transparent;
