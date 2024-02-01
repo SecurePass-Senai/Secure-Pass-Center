@@ -19,6 +19,9 @@ export const usersResource = '/users'
 // Rota para User Machine
 export const userMachineResource = '/user-machine'
 
+//Rota para Photo   
+export const PhotoResource = '/photo'
+
 
 
 const apiPort = '8080';

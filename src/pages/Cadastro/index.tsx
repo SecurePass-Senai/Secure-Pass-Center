@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./style.css"
-import api, { usersResource } from "../../utils/api";
+import api, { PhotoResource, usersResource } from "../../utils/api";
 import Stepper from "awesome-react-stepper";
 
 export default function Cadastro() {
@@ -15,17 +15,12 @@ export default function Cadastro() {
     const [matricula, setMatricula] = useState<string>("")
     const [nome, setNome] = useState<string>("")
     const [setor, setSetor] = useState<string>("")
-    const [dataNasc, setDataNasc] = useState<string>("")
+    const [nascimento, setNascimento] = useState<string>("")
     const [funcao, setFuncao] = useState<string>("")
     const [sessao, setSessao] = useState<string>("")
     const [email, setEmail] = useState<string>("")
     const [password, setPassword] = useState<string>("")
-    const [arquivo,setArquivo] = useState<any>([])
-
-
-
-
-
+    const [arquivo, setArquivo] = useState<any>([])
 
 
 
@@ -37,7 +32,7 @@ export default function Cadastro() {
 
         valorDigitado = valorDigitado.replace(/\D/g, '');
         valorDigitado = valorDigitado.replace(/(\d{2})(\d{2})(\d{2})/, '$1/$2/$3');
-        console.log(valorDigitado)
+        // console.log(valorDigitado)
         event.target.value = valorDigitado;
     }
 
@@ -48,42 +43,33 @@ export default function Cadastro() {
 
         const formData = new FormData()
 
-        // const id = ("990e6c01-8fd8-11ee-b7e1-b445067b7d49")
         const id = ("eab2240a-617d-4b04-a2f3-b0012af2af5e")
         formData.append("id_tipousuario", id)
         formData.append("matricula", matricula)
         formData.append("nome", nome)
         formData.append("setor", setor)
-        formData.append("nascimento", "2000-03-05")
-        // formData.append("dataNasc", dataNasc)
+        formData.append("nascimento", "2000-12-12")
         formData.append("funcao", funcao)
         formData.append("sessao", sessao)
         formData.append("email", email)
-        formData.append("face", arquivo)
+        formData.append("image", arquivo)
 
 
 
 
-        // api.post(`users`, formData).then((response) => {
-        //     console.log(response)
-        //     alert("usuario cadastrado com sucesso!")
-        //     //navegacao para login
-
-        // }).catch((error) => {
-        //     console.log(error)
-        //     alert("Deu erro aqui em! " + error)
-        // })
+        console.log("hereee");
+        console.log(formData)
 
 
-        await api.post(usersResource, formData, {
-            headers : {
-                "content-type": "multipart/form-data"
+         api.post(`${usersResource}`, formData,{
+            headers: {
+                'Content-Type': 'multipart/form-data',
             }
-        }).then((resposta: any ) => {
+        }
+
+        ).then((resposta: any) => {
             console.log("teste");
             console.log(resposta.data);
-            
-            
         })
 
     }
@@ -91,7 +77,6 @@ export default function Cadastro() {
     return (
 
         <main className="_cadastro">
-            {/* <center> <h2>Cadastro</h2></center> */}
 
             <Stepper
                 strokeColor="#00FFFF"//linha :)
@@ -162,12 +147,12 @@ export default function Cadastro() {
                         />
                     </div>
                     <div className="forms">
-                        <label htmlFor="dataNasc" />data de Nascimento:
+                        <label htmlFor="dataNasc" />Data de Nascimento:
                         <input type="text"
                             placeholder="data de Nascimento"
                             id="dataNasc"
                             onChange={(event) => {
-                                setDataNasc(event.target.value)
+                                setNascimento(event.target.value)
                             }}
                             required
                             onKeyUp={mascaraDataNasc}
@@ -186,24 +171,14 @@ export default function Cadastro() {
                             required
                         />
                     </div>
-                    {/* <div className="forms">
-                        <label htmlFor="password" />Senha:
-                        <input type="password"
-                            placeholder="Senha"
-                            id="password"
-                            onChange={(event) => {
-                                setPassword(event.target.value)
-                            }}
-                            required
-                        />
-                    </div> */}
+
 
                     <div className="forms">
                         <label htmlFor="file" />Arquivo:
                         <input type="file"
                             id="file"
                             onChange={event => {
-                                setArquivo(event.target.files[0])   
+                                setArquivo(event.target.files[0])
                             }}
                             required
                         />
