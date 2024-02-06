@@ -20,13 +20,15 @@
     1px 0px 0px #000;
 }
 
-/* body {
-      background: url(../../assets/img/Backgronud.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      
-  } */
+.logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
+.logo_header{
+  height: 90px;
+}
  
 .container_grid {
   width: 90%;
@@ -73,7 +75,7 @@
 
 .linha_baixo_esquerda {
   border-bottom: 1px solid var(--branco);
-  width: 1266px;
+  width: 100%;
 
 
 }
@@ -85,7 +87,7 @@
 
 .linha_baixo_direita {
   border-bottom: 1px solid var(--branco);
-  width: 570px;
+  width: 30%;
 }
 
 /* Botoes */

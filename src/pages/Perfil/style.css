@@ -41,7 +41,7 @@
     font-family: var(--font1);
     background-color: var(--branco);
     border-radius: 30px;
-    margin-top: 10%;
+    margin-top: 5%;
     background: linear-gradient(146deg, rgba(7, 47, 87, 0.20) 0%, rgba(7, 47, 87, 0.83) 98.56%);
 
     backdrop-filter: blur(4px);
@@ -93,17 +93,19 @@
 }
 
 .direita tr {
-    display: flex;
+   
     color: white;
-    flex-direction: column;
-    text-align: right;
-    padding-right: 25px;
-    margin-top: 30px;
+    
 
 }
 
 .direita th {
+    display: flex;
     list-style-type: none;
+    flex-direction: column;
+    flex-basis: 100%;
+    padding-right: 30px;
+    margin-top: 30px;
 }
 
 /* Alinhando o P */

@@ -22,8 +22,9 @@ import IdFacialAprovado from './pages/IdFacialAprovado'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Header />
-    
+
+      <Header/>
+      
       <Routes>
         <Route path='idfacial' element={<IdFacial/>}/>
         <Route path='idfacialaprovado' element={<IdFacialAprovado/>}/>

@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import "./style.css"
 import api, { PhotoResource, usersResource } from "../../utils/api";
 import Stepper from "awesome-react-stepper";
+import { Bounce, ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Cadastro() {
     /*
@@ -12,6 +14,25 @@ export default function Cadastro() {
      * att. Murilo Ferreira
     */
 
+
+
+        function notify (){
+            toast('😁 Cadastrado com Sucesso!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+                });
+        }
+
+
+
+
     const [matricula, setMatricula] = useState<string>("")
     const [nome, setNome] = useState<string>("")
     const [setor, setSetor] = useState<string>("")
@@ -19,11 +40,11 @@ export default function Cadastro() {
     const [funcao, setFuncao] = useState<string>("")
     const [sessao, setSessao] = useState<string>("")
     const [email, setEmail] = useState<string>("")
-    const [password, setPassword] = useState<string>("")
+    const [typeUser, setTypeUser] = useState<string>("")
     const [arquivo, setArquivo] = useState<any>([])
 
 
-
+  
 
     function mascaraDataNasc(event: any) {
         let valorDigitado = event.target.value;
@@ -31,11 +52,15 @@ export default function Cadastro() {
         if (!valorDigitado) return "";
 
         valorDigitado = valorDigitado.replace(/\D/g, '');
-        valorDigitado = valorDigitado.replace(/(\d{2})(\d{2})(\d{2})/, '$1/$2/$3');
-        // console.log(valorDigitado)
+        valorDigitado = valorDigitado.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3');
+        console.log(valorDigitado)
         event.target.value = valorDigitado;
     }
-
+    
+    const selectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        const value = event.target.value;
+        setTypeUser(value);
+      };
 
     async function cadastrarUsers(event: any) {
 
@@ -48,13 +73,14 @@ export default function Cadastro() {
         formData.append("matricula", matricula)
         formData.append("nome", nome)
         formData.append("setor", setor)
-        formData.append("nascimento", "2000-12-12")
+        formData.append("nascimento", nascimento)
         formData.append("funcao", funcao)
         formData.append("sessao", sessao)
         formData.append("email", email)
+        formData.append("typeUser", typeUser)
         formData.append("image", arquivo)
 
-
+       
 
 
         console.log("hereee");
@@ -74,18 +100,19 @@ export default function Cadastro() {
 
     }
 
+
     return (
 
         <main className="_cadastro">
-
+            <ToastContainer/>
             <Stepper
                 strokeColor="#00FFFF"//linha :)
                 fillStroke="#00FFFF"
                 activeColor="#00CED1"
                 activeProgressBorder="2px solid #00CED1"
-                submitBtn={<button type="submit" className="onSubmit">Salvar</button>}
-                continueBtn={<button className="continueBtn">Proximo</button>}
-                backBtn={<button className="stepperBtn">Voltar</button>}
+                submitBtn={<button type="submit" className="btn_multi" onClick={notify}>Salvar</button>}
+                continueBtn={<button className="btn_multi">Proximo</button>}
+                backBtn={<button className="btn_multi">Voltar</button>}
                 onSubmit={cadastrarUsers}
             >
                 <form onSubmit={cadastrarUsers} className="formulario bkg_login" method="POST">
@@ -151,6 +178,7 @@ export default function Cadastro() {
                         <input type="text"
                             placeholder="data de Nascimento"
                             id="dataNasc"
+                            maxLength={10}
                             onChange={(event) => {
                                 setNascimento(event.target.value)
                             }}
@@ -170,6 +198,18 @@ export default function Cadastro() {
                             }}
                             required
                         />
+                    </div>
+
+                    <div className="forms">
+                        <label htmlFor="typeUser" />Tipo de Usuario:
+                        <select 
+                            id="typeUser"
+                           onChange={selectChange}
+                            required
+                        >
+                        <option value="Administrador">Administrador</option>
+                        <option value="Funcionario">Funcionario</option>
+                            </select>
                     </div>
 
 

@@ -1,7 +1,7 @@
 import "./style.css"
-import FaceID from "../../assets/img/rostogifavaivaivai.gif"
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
+import face from "../../assets/img/Volkswagen_logo_2019.svg"
 
 export default function EntradaIdFacial (){
 
@@ -14,21 +14,14 @@ export default function EntradaIdFacial (){
 
 return(
     <>
-    
     <div className="content">
   <div className="rosto-leitura">
-    {/* <img
-      src={FaceID}
-      alt="Imagem da Biometria"
-      className="circle-image"
-    /> */}
+    <img className="image" src={face} alt="face"/>
   </div>
   <div className="btn">
     <Link to='idfacial' className="botao_principal">Face ID</Link>
   </div>
 </div>
-
-
     </>
 )
 

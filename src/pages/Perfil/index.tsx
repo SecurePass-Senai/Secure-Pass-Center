@@ -8,7 +8,7 @@ import CardPerfil from "../../components/CardPerfil";
 
 function Perfil() {
 //id Setado tem que receber o id do login
-    const id = "5aab2168-a313-488d-83e6-a7f42c6a2b25";
+    const id = "5ac2ab21-68c2-a313-48c2-8dc283c3a6c2";
     const [users, setUsers] = useState<any[]>([]);
     const [user, setUser] = useState<any>({});
 
@@ -35,10 +35,6 @@ function Perfil() {
         <>
             <section className='emglobador'>
                 <div className="box_perfil">  <h2 className="_titulo">Perfil do Usuario </h2>
-                    {/* adicionar imagem do usuario aqui */}
-
-                    {/* <span>Administrador</span> */}
-                    {/* <hr /> */}
                     <table className='tabelaPerfil'>
                         <thead className='esquerda'>
                             <tr>

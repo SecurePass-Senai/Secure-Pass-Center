@@ -101,11 +101,28 @@ body {
 
 }
 
+._cadastro form select {
+    height: 50px;
+    color: white;
+    background: linear-gradient(146deg, rgba(94, 114, 140, 0.2) 0%, rgba(94, 114, 140, 0.83) 98.56%);
+    border: transparent;
+    border-radius: 10px;
+
+}
+
 ._cadastro form input::placeholder {
     color: white
 }
 
-._cadastro button {
+._cadastro form option {
+    color: black
+}
+
+._cadastro form input::-webkit-file-upload-button {
+    background-image: url("../../assets/img/arquivo_icon.png");
+}
+
+.btn_multi {
     height: 50px;
     width: 200px;
     border-radius: 30%;

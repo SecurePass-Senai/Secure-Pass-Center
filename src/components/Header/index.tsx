@@ -11,8 +11,10 @@ export default function Header() {
 
       <header>
         <div className="container_grid header_texto ">
+          <div className="logo">
+          <img className="logo_header" src={Logo}/>
           <p>securePass</p>
-
+          </div>
 
           <div className="menu">
             <nav className="menu_ss">
