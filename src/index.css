@@ -11,6 +11,7 @@ body {
   background: url(../src/assets/img/teste_video2.gif);
   background-size: cover;
   background-repeat: no-repeat;
+  /* background-color: rgb(42, 42, 78); */
   position: relative;
   top: 0;
   width: 100%;

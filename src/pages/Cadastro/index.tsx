@@ -16,19 +16,19 @@ export default function Cadastro() {
 
 
 
-        function notify (){
-            toast('😁 Cadastrado com Sucesso!', {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                transition: Bounce,
-                });
-        }
+    function notify() {
+        toast('😁 Cadastrado com Sucesso!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+        });
+    }
 
 
 
@@ -44,7 +44,7 @@ export default function Cadastro() {
     const [arquivo, setArquivo] = useState<any>([])
 
 
-  
+
 
     function mascaraDataNasc(event: any) {
         let valorDigitado = event.target.value;
@@ -56,11 +56,32 @@ export default function Cadastro() {
         console.log(valorDigitado)
         event.target.value = valorDigitado;
     }
-    
-    const selectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        const value = event.target.value;
-        setTypeUser(value);
-      };
+
+      // Função para lidar com a mudança de seleção
+      const selectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        const selectedValue = event.target.value;
+        // Mapear os valores das opções para os IDs correspondentes
+        const idMap: { [key: string]: string } = {
+            Administrador: "a87b7093-dce7-497a-9a1d-703c3efee558",
+            Funcionario: "ac2d3b05-62c8-4ee9-ba32-c3caa4c3442b"
+            // Adicione mais opções e IDs conforme necessário
+        };
+        // Definir o estado typeUser com o ID correspondente
+        setTypeUser(idMap[selectedValue]);
+
+        console.log(typeUser);
+        
+    };
+
+
+    //Validacao de campo  
+
+    // const isFormValid = () => {
+    //     if (nome.trim() !== '' && matricula.trim() !== '' && setor.trim() !== '') {
+    //     } 
+        
+
+    // }
 
     async function cadastrarUsers(event: any) {
 
@@ -68,26 +89,25 @@ export default function Cadastro() {
 
         const formData = new FormData()
 
-        const id = ("eab2240a-617d-4b04-a2f3-b0012af2af5e")
-        formData.append("id_tipousuario", id)
+       
+        
+
+
+        
+        // formData.append("id_tipousuario", typeUser)
         formData.append("matricula", matricula)
         formData.append("nome", nome)
         formData.append("setor", setor)
-        formData.append("nascimento", nascimento)
+        formData.append("nascimento", "2000-12-12")
         formData.append("funcao", funcao)
         formData.append("sessao", sessao)
         formData.append("email", email)
-        formData.append("typeUser", typeUser)
+        formData.append("id_tipousuario", typeUser)
         formData.append("image", arquivo)
 
-       
 
 
-        console.log("hereee");
-        console.log(formData)
-
-
-         api.post(`${usersResource}`, formData,{
+        api.post(`${usersResource}`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             }
@@ -104,14 +124,14 @@ export default function Cadastro() {
     return (
 
         <main className="_cadastro">
-            <ToastContainer/>
+            <ToastContainer />
             <Stepper
                 strokeColor="#00FFFF"//linha :)
                 fillStroke="#00FFFF"
                 activeColor="#00CED1"
                 activeProgressBorder="2px solid #00CED1"
                 submitBtn={<button type="submit" className="btn_multi" onClick={notify}>Salvar</button>}
-                continueBtn={<button className="btn_multi">Proximo</button>}
+                continueBtn={<button className="btn_multi" >Proximo</button>}
                 backBtn={<button className="btn_multi">Voltar</button>}
                 onSubmit={cadastrarUsers}
             >
@@ -149,6 +169,8 @@ export default function Cadastro() {
                             required
                         />
                     </div>
+
+                    isFo
                 </form>
                 <form onSubmit={cadastrarUsers} className="formulario" method="POST">
                     <div className="forms">
@@ -202,14 +224,15 @@ export default function Cadastro() {
 
                     <div className="forms">
                         <label htmlFor="typeUser" />Tipo de Usuario:
-                        <select 
+                        <select
                             id="typeUser"
-                           onChange={selectChange}
+                            onChange={selectChange}
                             required
                         >
-                        <option value="Administrador">Administrador</option>
-                        <option value="Funcionario">Funcionario</option>
-                            </select>
+                            <option hidden>Escolha o Tipo do Usuario</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Funcionario">Funcionario</option>
+                        </select>
                     </div>
 
 
