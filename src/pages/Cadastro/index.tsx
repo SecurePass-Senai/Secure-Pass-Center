@@ -170,7 +170,6 @@ export default function Cadastro() {
                         />
                     </div>
 
-                    isFo
                 </form>
                 <form onSubmit={cadastrarUsers} className="formulario" method="POST">
                     <div className="forms">

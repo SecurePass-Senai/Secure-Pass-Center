@@ -97,7 +97,7 @@
   /* flex-direction: row; */
   /* position: relative; */
   /* padding-top: 50px; */
-
+  
 }
 
 .menu_ss a {
@@ -147,6 +147,6 @@
 }
 
 .menu nav{
-  
+  /* visibility: collapse; */
   width: 90%;
 }

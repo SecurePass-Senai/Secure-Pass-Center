@@ -18,21 +18,20 @@ export default function Header() {
 
           <div className="menu">
             <nav className="menu_ss">
-              <Link to='Cadastro' className="btn_cadastrar">Cadastrar</Link>
+              <Link to='Cadastro'>Cadastrar</Link>
               
               
-              <Link to='logs' className="btn_cadastrar">Ações</Link>
-              
-              
-              
-             <Link to='perfil/1' className="btn_cadastrar">Perfil</Link>
+              <Link to='logs'>Ações</Link>
               
               
               
-              <Link to='/' className="btn_cadastrar">Sair</Link>
+             <Link to='perfil/1'>Perfil</Link>
               
               
-            </nav>
+              
+              <Link to='/'>Sair</Link>
+              
+            </nav> 
           </div>
           <p>biometria facial</p>
         </div>

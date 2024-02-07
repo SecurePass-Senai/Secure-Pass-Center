@@ -76,9 +76,7 @@
     height: 400px;
     border-radius: 40px;
   }
-  .image {
-    
-  }
+  
   
   .botao_principal {
     display: flex;
@@ -114,11 +112,107 @@
   }
   
   .btn a:hover {
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
     color: #000;
   }
+
+
+
+
+
+
+
+
+
+
+
+  .facial{
+    min-width: 300px;
+    min-height: 60px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-style: normal;
+    font-size: 22px;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #cecece;
+    background: #042E54;
+  background: linear-gradient(90deg, rgba(27,80,127,50) 0%, rgba(65,120,169,66) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(33, 56, 78, 0.801);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    }
+
+    
+    
   
+  .facial::before {
+  content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #17466cb0;
+    box-shadow: 0 0 60px rgba(4,46,84,.33);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
   
+  .facial:hover, .facial:focus {
+    color: #ffffff;
+    transform: translateY(-6px);
+  }
+  
+  .facial:hover::before, .facial:focus::before {
+    opacity: 1;
+  }
+  
+  .facial::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #045cae;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  .facial:hover::after, .facial:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 200px;
+      height: 200px;
+      opacity: 0;
+    }
+  }
+
+
+
+
+
+
+
+
+
   @media screen and (max-width:768px) {
     .linha hr {
   
