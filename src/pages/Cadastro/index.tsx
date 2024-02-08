@@ -4,6 +4,8 @@ import api, { PhotoResource, usersResource } from "../../utils/api";
 import Stepper from "awesome-react-stepper";
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from "react-router-dom";
+import StepWizard from 'react-step-wizard';
 
 export default function Cadastro() {
     /*
@@ -14,7 +16,11 @@ export default function Cadastro() {
      * att. Murilo Ferreira
     */
 
+    
 
+      
+
+      
 
     function notify() {
         toast('😁 Cadastrado com Sucesso!', {
@@ -51,7 +57,7 @@ export default function Cadastro() {
 
         if (!valorDigitado) return "";
 
-        valorDigitado = valorDigitado.replace(/\D/g, '');
+        // valorDigitado = valorDigitado.replace(/\D/g, '');
         valorDigitado = valorDigitado.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3');
         console.log(valorDigitado)
         event.target.value = valorDigitado;
@@ -94,11 +100,10 @@ export default function Cadastro() {
 
 
         
-        // formData.append("id_tipousuario", typeUser)
         formData.append("matricula", matricula)
         formData.append("nome", nome)
         formData.append("setor", setor)
-        formData.append("nascimento", "2000-12-12")
+        formData.append("nascimento", nascimento)
         formData.append("funcao", funcao)
         formData.append("sessao", sessao)
         formData.append("email", email)
@@ -120,6 +125,7 @@ export default function Cadastro() {
 
     }
 
+    
 
     return (
 
@@ -130,11 +136,14 @@ export default function Cadastro() {
                 fillStroke="#00FFFF"
                 activeColor="#00CED1"
                 activeProgressBorder="2px solid #00CED1"
-                submitBtn={<button type="submit" className="btn_multi" onClick={notify}>Salvar</button>}
-                continueBtn={<button className="btn_multi" >Proximo</button>}
+                submitBtn={<Link to={"/"}><button type="submit" className="btn_multi" onClick={notify}>Salvar</button></Link>}
+                continueBtn={<button className="btn_multi">Proximo</button>}
                 backBtn={<button className="btn_multi">Voltar</button>}
                 onSubmit={cadastrarUsers}
             >
+
+
+                
                 <form onSubmit={cadastrarUsers} className="formulario bkg_login" method="POST">
                     <div className="forms">
                         <label htmlFor="nome" />Nome:
@@ -169,9 +178,9 @@ export default function Cadastro() {
                             required
                         />
                     </div>
-
-                </form>
-                <form onSubmit={cadastrarUsers} className="formulario" method="POST">
+                    </form>
+                    <form onSubmit={cadastrarUsers} className="formulario bkg_login" method="POST">
+                
                     <div className="forms">
                         <label htmlFor="sessao" />Sessao:
                         <input type="text"
@@ -207,8 +216,8 @@ export default function Cadastro() {
                             onKeyUp={mascaraDataNasc}
                         />
                     </div>
-                </form>
-                <form onSubmit={cadastrarUsers} className="formulario" method="POST">
+                    </form>
+                    <form onSubmit={cadastrarUsers} className="formulario bkg_login" method="POST">
                     <div className="forms">
                         <label htmlFor="email" />E-Mail:
                         <input type="email"
@@ -245,8 +254,8 @@ export default function Cadastro() {
                             required
                         />
                     </div>
-
-                </form>
+                    </form>
+                
 
             </Stepper>
 
