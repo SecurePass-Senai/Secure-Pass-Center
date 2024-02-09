@@ -145,115 +145,125 @@ export default function Cadastro() {
 
                 
                 <form onSubmit={cadastrarUsers} className="formulario bkg_login" method="POST">
-                    <div className="forms">
-                        <label htmlFor="nome" />Nome:
-                        <input type="text"
-                            placeholder="Nome"
-                            id="nome"
-                            onChange={(event) => {
-                                setNome(event.target.value)
-                            }}
-                            required
-                        />
-                    </div>
-                    <div className="forms">
-                        <label htmlFor="matricula" />Matricula:
-                        <input type="text"
-                            placeholder="Matricula"
-                            id="matricula"
-                            onChange={(event) => {
-                                setMatricula(event.target.value)
-                            }}
-                            required
-                        />
-                    </div>
-                    <div className="forms">
-                        <label htmlFor="setor" />Setor:
-                        <input type="text"
-                            placeholder="Setor"
-                            id="setor"
-                            onChange={(event) => {
-                                setSetor(event.target.value)
-                            }}
-                            required
-                        />
-                    </div>
+                        <div className="alinhamento">
+                            <div className="forms">
+                                <label htmlFor="nome" />Nome:
+                                <input type="text"
+                                    placeholder="Nome"
+                                    id="nome"
+                                    onChange={(event) => {
+                                        setNome(event.target.value)
+                                    }}
+                                    required
+                                />
+                            </div>
+                            <div className="forms">
+                                <label htmlFor="matricula" />Matricula:
+                                <input type="text"
+                                    placeholder="Matricula"
+                                    id="matricula"
+                                    onChange={(event) => {
+                                        setMatricula(event.target.value)
+                                    }}
+                                    required
+                                />
+                            </div>
+                            <div className="forms">
+                                <label htmlFor="setor" />Setor:
+                                <input type="text"
+                                    placeholder="Setor"
+                                    id="setor"
+                                    onChange={(event) => {
+                                        setSetor(event.target.value)
+                                    }}
+                                    required
+                                />
+                            </div>
+                        </div>
+
                     </form>
+
+
                     <form onSubmit={cadastrarUsers} className="formulario bkg_login" method="POST">
-                
-                    <div className="forms">
-                        <label htmlFor="sessao" />Sessao:
-                        <input type="text"
-                            placeholder="Sessao"
-                            id="sessao"
-                            onChange={(event) => {
-                                setSessao(event.target.value)
-                            }}
-                            required
-                        />
-                    </div>
-                    <div className="forms">
-                        <label htmlFor="funcao" />Função:
-                        <input type="text"
-                            placeholder="Função"
-                            id="funcao"
-                            onChange={(event) => {
-                                setFuncao(event.target.value)
-                            }}
-                            required
-                        />
-                    </div>
-                    <div className="forms">
-                        <label htmlFor="dataNasc" />Data de Nascimento:
-                        <input type="text"
-                            placeholder="data de Nascimento"
-                            id="dataNasc"
-                            maxLength={10}
-                            onChange={(event) => {
-                                setNascimento(event.target.value)
-                            }}
-                            required
-                            onKeyUp={mascaraDataNasc}
-                        />
-                    </div>
-                    </form>
-                    <form onSubmit={cadastrarUsers} className="formulario bkg_login" method="POST">
-                    <div className="forms">
-                        <label htmlFor="email" />E-Mail:
-                        <input type="email"
-                            placeholder="E-Mail"
-                            id="email"
-                            onChange={(event) => {
-                                setEmail(event.target.value)
-                            }}
-                            required
-                        />
-                    </div>
+                        
+                        <div className="alinhamento">
+                                <div className="forms">
+                                    <label htmlFor="sessao" />Sessao:
+                                    <input type="text"
+                                        placeholder="Sessao"
+                                        id="sessao"
+                                        onChange={(event) => {
+                                            setSessao(event.target.value)
+                                        }}
+                                        required
+                                    />
+                                </div>
+                                <div className="forms">
+                                    <label htmlFor="funcao" />Função:
+                                    <input type="text"
+                                        placeholder="Função"
+                                        id="funcao"
+                                        onChange={(event) => {
+                                            setFuncao(event.target.value)
+                                        }}
+                                        required
+                                    />
+                                </div>
+                                <div className="forms">
+                                    <label htmlFor="dataNasc" />Data de Nascimento:
+                                    <input type="text"
+                                        placeholder="data de Nascimento"
+                                        id="dataNasc"
+                                        maxLength={10}
+                                        onChange={(event) => {
+                                            setNascimento(event.target.value)
+                                        }}
+                                        required
+                                        onKeyUp={mascaraDataNasc}
+                                    />
+                                </div>
 
-                    <div className="forms">
-                        <label htmlFor="typeUser" />Tipo de Usuario:
-                        <select
-                            id="typeUser"
-                            onChange={selectChange}
-                            required
-                        >
-                            <option hidden>Escolha o Tipo do Usuario</option>
-                            <option value="Administrador">Administrador</option>
-                            <option value="Funcionario">Funcionario</option>
-                        </select>
-                    </div>
+                        </div>
+                                </form>
+                                <form onSubmit={cadastrarUsers} className="formulario bkg_login" method="POST">
+                                 <div className="alinhamento">
+                                        <div className="forms">
+                                            <label htmlFor="email" />E-Mail:
+                                            <input type="email"
+                                                placeholder="E-Mail"
+                                                id="email"
+                                                onChange={(event) => {
+                                                    setEmail(event.target.value)
+                                                }}
+                                                required
+                                            />
+                                        </div>
+
+                                        <div className="forms">
+                                            <label htmlFor="typeUser" />Tipo de Usuario:
+                                            <select
+                                                id="typeUser"
+                                                onChange={selectChange}
+                                                required
+                                            >
+                                                <option hidden>Escolha o Tipo do Usuario</option>
+                                                <option value="Administrador">Administrador</option>
+                                                <option value="Funcionario">Funcionario</option>
+                                            </select>
+                                        </div>
 
 
-                    <div className="forms">
-                        <label htmlFor="file" />Arquivo:
-                        <input type="file"
-                            id="file"
-                            onChange={event => {
-                                setArquivo(event.target.files[0])
-                            }}
-                            required
-                        />
-                    </div>
+                                        <div className="forms">
+                                            <label htmlFor="file" />Arquivo:
+                                            <input type="file"
+                                                id="file"
+                                                onChange={event => {
+                                                    setArquivo(event.target.files[0])
+                                                }}
+                                                required
+                                            />
+                                        </div>
+                                    </div>
                     </form>
                 
 

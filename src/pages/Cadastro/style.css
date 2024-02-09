@@ -78,6 +78,8 @@ body {
 
 }
 
+
+
 ._cadastro .forms {
     height: 80px;
     width: 600px;
@@ -117,7 +119,7 @@ body {
 }
 
 ._cadastro form option {
-    color: black
+        color: black
 }
 
 ._cadastro form input::-webkit-file-upload-button {
@@ -226,57 +228,26 @@ body {
     text-decoration: none;
     margin: 5px;
 }
+/* Responsividade */
 
 
-@media screen and (max-width: 800px) {
-    .hom {
-        display: none;
-    }
+@media screen and (max-width: 768px) {
 
-    .edi {
+    ._cadastro .formulario{
+        width: 412px;
         display: flex;
-        width: 120px;
+        justify-content: center;
+        
+       
     }
+    
 
-
-    ._cadastro {
+    .formulario .alinhamento .forms {
+        width:300px;
+        height: 20px;       
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-
+        padding: 25px;
+       
     }
-
-
-}
-
-
-@media screen and (max-width: 510px) {
-
-    .formulario {
-        width: 400px;
-        height: 300px;
-    }
-
-    .forms {
-        width: 350px;
-        height: 50px;
-    }
-
-    .menu_css {
-        margin-top: 40px;
-    }
-}
-
-@media screen and (max-width: 405px) {
-
-    .formulario {
-        width: 350px;
-        height: 250px;
-    }
-
-    .forms {
-        width: 350px;
-        height: 40px;
-    }
+ 
 }
