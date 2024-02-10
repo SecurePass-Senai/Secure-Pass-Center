@@ -46,14 +46,10 @@ export const WebcamCapture = () => {
         }).then((resposta: any) => {
             console.log("teste");
             console.log(resposta.data);
-
-
+            
         })
 
         console.log(formData);
-
-
-
 
         // var link = document.createElement('a')
         // link.download = "photo.png"

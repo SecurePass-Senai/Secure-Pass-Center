@@ -20,6 +20,12 @@
 }
 
 /* Color-scheme implementa um tema escuro mudando as cores padrão */
+
+h2{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
 ._acoes html {
  color-scheme: dark; 
 }
@@ -116,7 +122,7 @@
   background-color: #FF3B30;
 }
 
-@media screen and (max-width: 950px) {
+/* @media screen and (max-width: 950px) {
   .conjunto-botoes {
       display: flex;
       justify-content: space-between;
@@ -130,59 +136,38 @@
       margin-right: 15px;
   }
 
-}
+} */
 
-@media screen and (max-width: 1000px) {
-  thead {
-      display: none;
-  }
 
-  td {
-      display: grid;
-      gap: 10px;
-      grid-template-columns: 20ch auto;
-
-      padding: 10px 15px;
-  }
-
-  td::before {
-      content: attr(data-cell) ": ";
-      font-weight: 700;
-      text-transform: capitalize;
-  }
-
-  td:first-child {
-      padding-top: 24px;
-  }
-
-  td:last-child {
-      padding-bottom: 24px;
-  }
+/* @media screen and (max-width: 768px) {
   
-  .linha-mensagem td::before {
-      content: '';
+   h2{
+    display: flex;
+     margin-left: 50%;
+     flex-direction: row-reverse;
   }
 
-  .linha-mensagem td {
-      display: table-cell;
-      text-align: center;
-  }
-}
+  ._acoes .tabela{
+    display: flex;
+    margin-top: 20%;
+    margin-left: -25%;
+    flex-direction: row;
+    padding: 0%;
 
-@media screen and (max-width: 662px) {
-  main {
-      width: 90%;
-  }    
-}
-
-@media screen and (max-width: 500px) {
-  td {
-      grid-template-columns: 12ch auto;
   }
-}
 
-@media screen and (max-width: 500px) {
-  td {
-      font-size: 14px;
+
+  .tabela th{
+   display: flex;
+   font-size: 12px;
+   
   }
+  ._acoes section{
+    display: flex;
+    padding: 0 auto;
+    margin: 30px 0px;
+    border-radius: 8px;
+    height: 50%;
+
+  } */
 }

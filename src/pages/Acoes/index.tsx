@@ -28,7 +28,7 @@ export default function Acoes() {
 
     <main className="_acoes">
       <section>
-        <center><h2>Tabela de Logs</h2></center>
+       <h2>Tabela de Logs</h2>
         <table>
           {/* <caption>Tabela de Logs</caption> */}
           <thead className="tabela">
