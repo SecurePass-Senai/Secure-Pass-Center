@@ -2,6 +2,8 @@ import "./style.css";
 import React, { useState, useRef, MutableRefObject } from 'react';
 import { WebcamCapture } from "../../components/WebcamCapture";
 
+import api from "../../utils/api";
+
 function BiometriaFacial() {
   const webcamRef: MutableRefObject<any> = useRef(null); // Use any if you're unsure of the type
 
@@ -37,10 +39,15 @@ function BiometriaFacial() {
     [webcamRef]
   );
 
+
+
+
   return (
     
     <>
     <WebcamCapture></WebcamCapture>
+
+
     
     </>
   );

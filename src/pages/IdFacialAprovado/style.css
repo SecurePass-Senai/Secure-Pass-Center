@@ -37,8 +37,6 @@
 }
 
 
-
-
 .reconhecimento {
     width: 100%;
     display: flex;
@@ -47,8 +45,6 @@
     height: 580px;
 
 }
-
-
 
 .modulo {
     height: 120px;
@@ -80,11 +76,14 @@
     text-transform: capitalize;
 }
 
-.reconhecimento img {
-    width: 300px;
-    margin: 0px 50px;
+.reconhecimento{
+    background-color: black;
+    opacity: 1;
+    height: 100vh;
+}
 
-
+.carregar{
+    background-image: "../../assets/img/animacao.gif";
 }
 
 .botoes_footer {
@@ -138,8 +137,6 @@ a:hover {
         .customer_btn {
             /* flex-wrap: wrap; */
             flex-direction: column;
-
-
 
         }
 

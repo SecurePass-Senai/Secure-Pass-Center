@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import Webcam from "react-webcam";
 import api from '../../utils/api';
+import camera from '../../assets/img/camera-fotografica.png'
+import recarregar from '../../assets/img/recarregar.png'
 import "./style.css"
+
 
 
 const WebcamComponent = () => <Webcam />;
 
+
 const videoConstraints = {
-    width: 450,
-    height: 1080,
+    width: 300,
+    height: 500,
     facingMode: "user"
 };
 
@@ -63,9 +67,11 @@ export const WebcamCapture = () => {
         // Pegar o state -> image
         // Criar requisicao POST para a API -> axios
     }
-
+    
+  
 
     return (
+        
         <div className="webcam-container">
             <div className="webcam-img">
 
@@ -78,23 +84,30 @@ export const WebcamCapture = () => {
                     videoConstraints={videoConstraints}
                 /> : <img src={image} />}
             </div>
-            <div>
+            <div className='btn-button'>
                 {image != '' ?
                     <button onClick={(e) => {
-                        e.preventDefault();
-                        setImage('')
+                        // e.preventDefault();
+                        // setImage('')
                     }}
                         className="webcam-btn">
-                        Retake Image</button> :
+                              <img src={recarregar} alt="" /> 
+                        </button> :
+                    
                     <button onClick={(e) => {
                         e.preventDefault();
                         capture();
                     }}
-                        className="webcam-btn">Capture</button>
+                        className="webcam-btn">
+                            <img src={camera} alt="" />
+                            
+                        </button>
                 }
             </div>
 
 
         </div>
+
+        
     );
 };
