@@ -13,11 +13,11 @@ function BiometriaFacial() {
 
   const startWebcam = () => {
     navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
-        if (webcamRef.current) {
-          (webcamRef.current as any).srcObject = stream; // Use 'as any' to avoid TypeScript error
-          setIsWebcamOn(true);
-        }
-      })
+      if (webcamRef.current) {
+        (webcamRef.current as any).srcObject = stream; // Use 'as any' to avoid TypeScript error
+        setIsWebcamOn(true);
+      }
+    })
       .catch((error) => {
         console.error('Error accessing webcam:', error);
       });
@@ -38,17 +38,10 @@ function BiometriaFacial() {
     },
     [webcamRef]
   );
-
-
-
-
+  
   return (
-    
     <>
-    <WebcamCapture></WebcamCapture>
-
-
-    
+      <WebcamCapture></WebcamCapture>
     </>
   );
 }

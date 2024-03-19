@@ -5,10 +5,7 @@ import camera from '../../assets/img/camera-fotografica.png'
 import recarregar from '../../assets/img/recarregar.png'
 import "./style.css"
 
-
-
 const WebcamComponent = () => <Webcam />;
-
 
 const videoConstraints = {
     width: 300,
@@ -21,12 +18,9 @@ export const WebcamCapture = () => {
     const [image, setImage] = useState('');
     const webcamRef: any = React.useRef(null);
 
-
     const capture = React.useCallback(() => {
         const imageSrc = webcamRef.current.getScreenshot();
         setImage(imageSrc)
-
-        console.log(imageSrc)
 
         const byteCharacters = atob(imageSrc.replace('data:image/jpeg;base64,', ''));
         const byteNumbers = new Array(byteCharacters.length);
@@ -50,28 +44,11 @@ export const WebcamCapture = () => {
         }).then((resposta: any) => {
             console.log("teste");
             console.log(resposta.data);
-            
         })
-
-        console.log(formData);
-
-        // var link = document.createElement('a')
-        // link.download = "photo.png"
-        // link.href = webcamRef.current.getScreenshot()
-        // link.textContent = 'Clique para Baixar a imagem'
-        // document.body.appendChild(link)
-
     }, []);
 
-    const enviarImagem = () => {
-        // Pegar o state -> image
-        // Criar requisicao POST para a API -> axios
-    }
-    
-  
-
     return (
-        
+
         <div className="webcam-container">
             <div className="webcam-img">
 
@@ -91,23 +68,23 @@ export const WebcamCapture = () => {
                         // setImage('')
                     }}
                         className="webcam-btn">
-                              <img src={recarregar} alt="" /> 
-                        </button> :
-                    
+                        <img src={recarregar} alt="" />
+                    </button> :
+
                     <button onClick={(e) => {
                         e.preventDefault();
                         capture();
                     }}
                         className="webcam-btn">
-                            <img src={camera} alt="" />
-                            
-                        </button>
+                        <img src={camera} alt="" />
+
+                    </button>
                 }
             </div>
 
 
         </div>
 
-        
+
     );
 };

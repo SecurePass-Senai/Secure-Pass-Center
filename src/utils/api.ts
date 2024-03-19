@@ -24,7 +24,7 @@ export const PhotoResource = '/photo'
 
 
 
-const apiPort = '8080';
+const apiPort = '8081';
  const localApiUri = `http://localhost:${apiPort}`;
 
 
